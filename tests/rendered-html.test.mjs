@@ -574,7 +574,13 @@ test("names the approved service area and visible localities without driving tim
     assert.doesNotMatch(html, /30 bis 40 Kilometern|30 Fahrminuten|30-Minuten/i, `${route} must not reintroduce a former radius`);
     if (route !== "/kontakt") {
       assert.match(html, /Unser Einsatzgebiet/i);
-      assert.match(html, /Raum Landsberg am Lech, Kaufering und Penzing sowie im westlichen Ammerseegebiet und in umliegenden Gemeinden/i);
+      if (route === "/zimmerei-landsberg-am-lech") {
+        const visibleRegion = html.replace(/<script[\s\S]*?<\/script>/gi, "");
+        assert.match(visibleRegion, /Ihr Zimmerei-Meisterbetrieb für Landsberg, Kaufering, Penzing, Dießen, Utting, Schondorf und Herrsching/i);
+        assert.match(visibleRegion, /Von unserem Standort Penzing-Ramsach aus/i);
+      } else {
+        assert.match(html, /Raum Landsberg am Lech, Kaufering und Penzing sowie im westlichen Ammerseegebiet und in umliegenden Gemeinden/i);
+      }
       const visible = html.replace(/<script[\s\S]*?<\/script>/gi, "");
       assert.match(visible, /Eresing, Hurlach, Igling, Weil, Scheuring und Egling/i);
     }

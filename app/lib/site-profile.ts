@@ -11,5 +11,6 @@ export const serviceAreaStructured = [
   { "@type": "City", name: "Utting am Ammersee" },
   { "@type": "City", name: "Schondorf am Ammersee" },
   { "@type": "City", name: "Dießen am Ammersee" },
+  { "@type": "City", name: "Herrsching am Ammersee" },
   { "@type": "Place", name: "Westliches Ammerseegebiet und umliegende Gemeinden" },
 ] as const;

@@ -30,6 +30,9 @@ const services = [
 ];
 
 const faqs = [
+  {"question": "Wie läuft eine energetische Dachsanierung in Landsberg ab?", "answer": "Am Anfang stehen die Besichtigung und das Aufmaß Ihres Dachs. Wir prüfen Tragwerk, Eindeckung, Feuchteschutz und vorhandene Dämmung. Anschließend planen wir den passenden Dachaufbau einschließlich Luftdichtheit und Anschlüssen; erforderliche Nachweise stimmen wir mit den zuständigen Fachplanern ab. Sie erhalten ein nachvollziehbares Angebot und einen abgestimmten Bauablauf. Nach Rückbau, Zimmererarbeiten, Dämmung und Neueindeckung folgen die Kontrolle der Details und die gemeinsame Abnahme."},
+  {"question": "Was kostet ein neuer Dachstuhl am Ammersee?", "answer": "Ein belastbarer Preis ergibt sich erst aus Dachform, Spannweiten, Holzquerschnitten und dem gewünschten Ausbau. Gauben, sichtbare Hölzer, statische Anforderungen sowie Kran- und Montageaufwand beeinflussen die Kosten zusätzlich. Wichtig ist der Leistungsumfang: Ein reiner Dachstuhl umfasst nicht automatisch Dämmung, Eindeckung oder den Rückbau des alten Dachs. KERN erstellt nach Prüfung Ihrer Pläne und des Bestands ein gegliedertes Angebot mit nachvollziehbaren Mengen und klar benannten Leistungen."},
+  {"question": "Wie funktioniert die digitale Massenermittlung beim Holzbau?", "answer": "Grundlage sind geprüfte Pläne und das Aufmaß am Gebäude. Daraus erfassen wir Bauteile im digitalen Modell und ermitteln Flächen, Längen, Holzvolumen sowie Stückzahlen. Dachüberstände, Öffnungen und unterschiedliche Bauteilschichten werden getrennt betrachtet. Bruttoflächen, Abzüge und die für das Angebot angesetzten Mengen bleiben nachvollziehbar. Ungeklärte Maße kennzeichnen wir und prüfen sie vor der Ausführung. So unterstützt die digitale Planung eine nachvollziehbare Kalkulation und Materialvorbereitung; die fachliche Kontrolle bleibt entscheidend."},
   {
     question: "Ist die Zimmerei Kern direkt in Landsberg am Lech ansässig?",
     answer: "KERN Zimmerei & Holzbau hat ihren Betrieb in der Dorfstraße 52 in Penzing-Ramsach, nahe Landsberg am Lech. Landsberg und der Landkreis Landsberg am Lech gehören zum regelmäßigen Einsatzgebiet.",
@@ -105,7 +108,7 @@ export default function ZimmereiLandsberg() {
 
     <section className="region-band" aria-labelledby="landsberg-region-title">
       <div><p className="section-label">Regional verwurzelt</p><h2 id="landsberg-region-title">Unser Einsatzgebiet</h2></div>
-      <div><ServiceAreaCopy /><div className="official-links"><Link href="/projekte/dachsanierung-utting-turm">Dachsanierung in Utting ansehen <ArrowMark /></Link><Link href="/projekte/dachsanierung-hausen-geltendorf">Dachsanierung in Hausen ansehen <ArrowMark /></Link></div></div>
+      <div><ServiceAreaCopy summary="Ihr Zimmerei-Meisterbetrieb für Landsberg, Kaufering, Penzing, Dießen, Utting, Schondorf und Herrsching. Von unserem Standort Penzing-Ramsach aus betreuen wir Dachsanierungen und Holzbauprojekte im Raum Landsberg am Lech, am Ammersee und in der Umgebung." /><div className="official-links"><Link href="/projekte/dachsanierung-utting-turm">Dachsanierung in Utting ansehen <ArrowMark /></Link><Link href="/projekte/dachsanierung-hausen-geltendorf">Dachsanierung in Hausen ansehen <ArrowMark /></Link></div></div>
     </section>
 
     <CtaBand title="Ihr Haus steht im Raum Landsberg?" copy="Ob Dachsanierung oder mehr Platz für Ihr Zuhause: Schreiben Sie uns kurz, was Sie vorhaben. Johannes Kern meldet sich persönlich bei Ihnen." button="Kontakt aufnehmen" />
