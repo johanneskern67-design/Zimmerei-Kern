@@ -1,20 +1,18 @@
-# KERN Zimmerei & Holzbau – Website
+# KERN Zimmerei & Holzbau – Website-Updates
 
-Quellcode der bestehenden Website https://dachwerk-kern.de.
+Website: https://dachwerk-kern.de
 
-Dieses bisher leere Repository wird mit dem geprüften Website-Quellstand einschließlich SEO-Update vom 8. November 2026 befüllt. Interne Auswertungen, Kundenanfragen, Zugangsdaten und die interne Git-Historie werden nicht übernommen.
+Dieses Repository enthält derzeit das gezielte SEO-Text- und Code-Update vom 8. November 2026. Die vollständige produktive Projektquelle einschließlich Assets und Build-Konfiguration liegt weiterhin im bestehenden Sites-Quellrepository. Dieser Ausschnitt allein ist kein vollständig startbares Website-Projekt.
 
-Die Produktion wird im bestehenden Sites-Projekt veröffentlicht. Ein Commit auf GitHub allein löst derzeit keine Veröffentlichung aus. Änderungen müssen zwischen GitHub und dem Sites-Quellrepository abgeglichen, gebaut, geprüft und als neue Site-Version veröffentlicht werden.
+## Monatsupdate November 2026
 
-## Entwicklung
+Bestehenden Ratgeber `/ratgeber/dachstuhl-erhalten` erweitert: Dachstuhl sanieren oder erneuern, energetische Sanierung, Dämmung, Kostenfaktoren, Bestandsprüfung in Landsberg und am Ammersee sowie direkte interne Verlinkung. Artikel- und Sitemap-Datum angepasst. Vorhandene Inhalte und Projektbelege bleiben erhalten.
 
-Node.js mindestens 22.13.0; die vorhandenen Build-Skripte benötigen Bash und GNU-Werkzeuge (unter Windows WSL).
+Enthaltene Dateien:
+- `app/ratgeber/focused-guides.ts`: geprüfter vollständiger Stand der betroffenen Inhaltsdatei.
+- `app/sitemap.xml/route.ts`: Änderungsdatum des Ratgebers.
+- `tests/rendered-html.test.mjs`: bestehende Rendering- und Datumsprüfungen.
 
-```sh
-npm ci
-npm run build
-node --test tests/*.test.mjs
-npm run dev
-```
+Build und Artefaktprüfung bestanden, 77 von 77 vorhandenen Tests erfolgreich. Geprüft wird im vollständigen Sites-Projekt. Interne Auswertungen, Kundenanfragen, Zugangsdaten und die interne Git-Historie werden nicht hier veröffentlicht.
 
-Produktive Schlüssel und Speicherbindungen werden ausschließlich in der Hosting-Umgebung verwaltet. Ohne diese Bindungen ist die lokale Vorschau keine Verbindung zu produktiven Anfragen oder zur Werkstatt.
+Ein GitHub-Commit löst derzeit keine Veröffentlichung aus. Änderungen müssen mit der vollständigen Sites-Quelle abgeglichen, dort gebaut, geprüft und im bestehenden Site-Projekt veröffentlicht werden. Keine neue Website und kein Wechsel des Hostings.
