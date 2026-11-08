@@ -398,7 +398,7 @@ test("renders the local Landsberg landing page with indexable SEO signals", asyn
 
   const html = await response.text();
   assert.equal(response.status, 200);
-  assert.match(html, /<title>Zimmerei Landsberg am Lech \| KERN aus Penzing<\/title>/i);
+  assert.match(html, /<title>Zimmerei Landsberg am Lech (?:&amp;|&) Ammersee \| KERN<\/title>/i);
   assert.match(html, /<link(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']https:\/\/dachwerk-kern\.de\/zimmerei-landsberg-am-lech["'])[^>]*>/i);
   assert.match(html, /Zimmerei für Landsberg/i);
   assert.match(html, /Landkreis Landsberg am Lech/i);
@@ -903,8 +903,8 @@ test("sitemap exposes original KERN project photos to Google image crawling", as
   assert.doesNotMatch(xml, /hausen-dachsanierung-dachaufbau|finning-aufstockung-baufortschritt/);
   assert.match(xml, /<loc>https:\/\/dachwerk-kern\.de\/ratgeber\/einblasdaemmung-altbau<\/loc>[\s\S]*?<image:loc>https:\/\/dachwerk-kern\.de\/images\/kern-einblasdaemmung-holzstaenderwand-v2\.webp<\/image:loc>/i);
   assert.match(xml, /<loc>https:\/\/dachwerk-kern\.de\/ratgeber\/aufstockung-genehmigung-bayern<\/loc>[\s\S]*?<image:loc>https:\/\/dachwerk-kern\.de\/images\/finning-aufstockung-montage\.webp<\/image:loc>/i);
-  assert.match(xml, /<loc>https:\/\/dachwerk-kern\.de\/dachsanierung<\/loc>\s*<lastmod>2026-10-28<\/lastmod>/i);
-  assert.match(xml, /<loc>https:\/\/dachwerk-kern\.de\/anbau-aufstockung<\/loc>\s*<lastmod>2026-10-20<\/lastmod>/i);
+  assert.match(xml, /<loc>https:\/\/dachwerk-kern\.de\/dachsanierung<\/loc>\s*<lastmod>2026-11-08<\/lastmod>/i);
+  assert.match(xml, /<loc>https:\/\/dachwerk-kern\.de\/anbau-aufstockung<\/loc>\s*<lastmod>2026-11-08<\/lastmod>/i);
   assert.match(xml, /<loc>https:\/\/dachwerk-kern\.de\/dachsanierung-landsberg-am-lech<\/loc>\s*<lastmod>2026-10-20<\/lastmod>/i);
   assert.match(xml, /<loc>https:\/\/dachwerk-kern\.de\/projekte\/dachsanierung-utting-turm<\/loc>\s*<lastmod>2026-10-15<\/lastmod>/i);
   assert.match(xml, /<loc>https:\/\/dachwerk-kern\.de\/projekte\/obergeschoss-holzstaenderbau-landsberg<\/loc>\s*<lastmod>2026-09-19<\/lastmod>/i);
