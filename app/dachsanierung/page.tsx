@@ -8,12 +8,12 @@ import { BreadcrumbStructuredData, FaqStructuredData, ServiceStructuredData } fr
 import { InlineInquiry, PageHero, SiteFrame } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: { absolute: "Dachsanierung im Bestand: Aufbau & Ablauf | KERN" },
-  description: "Wie läuft eine komplette Dachsanierung ab? KERN erklärt Dachaufbau, Dämmung, Eindeckung und Zuständigkeiten – mit echten Bauabläufen aus der Region Landsberg.",
+  title: { absolute: "Energetische Dachsanierung am Ammersee | KERN" },
+  description: "Energetische Dachsanierung am Ammersee: Dämmung, Luftdichtheit und Eindeckung passend zum Bestand planen. Persönlich begleitet von Johannes Kern.",
   alternates: { canonical: "/dachsanierung" },
   openGraph: {
-    title: "Dachsanierung im Bestand: Aufbau & Ablauf | KERN",
-    description: "Tragwerk, Dämmung, Dachaufbau und Eindeckung als ein Projekt – persönlich geführt vom Meisterbetrieb KERN.",
+    title: "Energetische Dachsanierung am Ammersee | KERN",
+    description: "Energetische Dachsanierung am Ammersee: Dämmung, Luftdichtheit und Eindeckung passend zum Bestand planen. Persönlich begleitet von Johannes Kern.",
     url: "/dachsanierung",
     type: "website",
     images: [{
@@ -24,6 +24,8 @@ export const metadata: Metadata = {
     }],
   },
 };
+metadata.twitter = { card: "summary_large_image", title: metadata.openGraph!.title, description: metadata.description!, images: ["/images/kern-social.webp"] };
+
 
 const modules = [
   ["Bestandsaufnahme", "Tragwerk, Dachhaut, Feuchtespuren und Ihre Wünsche bestimmen den Sanierungsumfang."],

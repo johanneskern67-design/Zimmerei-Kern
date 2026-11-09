@@ -5,7 +5,7 @@ import ArrowMark from "../components/ArrowMark";
 import { BreadcrumbStructuredData, ServiceStructuredData } from "../components/StructuredData";
 import { FriendlyInquiry, PageHero, RelatedService, SiteFrame } from "../components/SiteChrome";
 
-export const metadata: Metadata = { title: { absolute: "Anbau & Aufstockung in Holzbauweise | Landsberg–Ammersee" }, description: "KERN plant Anbau, Aufstockung und Gauben im Holzrahmenbau für Landsberg, Kaufering und Ammersee. Mit 3D-Planung und echter Referenz aus Finning.", alternates: { canonical: "/anbau-aufstockung" } };
+export const metadata: Metadata = { title: { absolute: "Haus aufstocken in Holzbauweise – Landsberg | KERN" }, description: "Haus aufstocken in Holzbauweise im Raum Landsberg am Lech: Bestand, zusätzlichen Wohnraum und Anschlüsse mit KERN und eigener 3D-Planung durchdenken.", alternates: { canonical: "/anbau-aufstockung" } };
 metadata.openGraph = { title: typeof metadata.title === "string" ? metadata.title : (metadata.title as { absolute: string }).absolute, description: metadata.description!, url: "/anbau-aufstockung", type: "website", images: [{ url: "/images/finning-aufstockung-montage.webp" }] };
 metadata.twitter = { card: "summary_large_image", title: metadata.openGraph.title, description: metadata.description!, images: ["/images/finning-aufstockung-montage.webp"] };
 
