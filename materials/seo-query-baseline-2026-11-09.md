@@ -74,3 +74,29 @@ Keine eigenmächtigen Änderungen an Unternehmensprofil, Beiträgen, Kategorien 
 **Bedeutung und Grenze:** Die Search Console meldet damit einen **Sitemap-Abruf nach** den veröffentlichten Site-Versionen V195/V196 vom 08.11.2026. Das zeigt weder, dass Google die betroffene Zielseite bereits erneut gecrawlt oder indexiert hat, noch eine Verbesserung von Ranking, CTR oder qualifizierten Anfragen. Die Zählweise der 156 eingereichten Inhalte bleibt ohne XML-Rohinhalt unbestätigt. `indexed` ist im Windsor-Feldkatalog veraltet und wurde bewusst nicht zur Diagnose genutzt. Die Web-Lesezugriffe auf `/sitemap.xml` und `/robots.txt` liefern keinen XML-/Text-Rohinhalt; daraus folgt kein Fehler der Website.
 
 **Live-Abgleich:** `/dachsanierung-landsberg-am-lech`, `/dachsanierung`, Startseite, `/zimmerei-landsberg-am-lech` und Kostenratgeber wurden am 09.11.2026 lesend aufgerufen; regionale H1, Utting-/Hausen-Belege, regionale Links und Ratgeber-Verweis sind öffentlich sichtbar. Keine produktive Testanfrage. **Änderung:** Nur diese Dokumentation. **Website-Code/Deployment:** Keines. **Messbarer Effekt:** Noch nicht messbar. **Rückweg:** Diesen Abschnitt per Git-Revert zurücknehmen. **Nächster Schritt:** Erst bei vollständigen Suchdaten nach dem 08.11. und kontrollierter aktueller Sites-Quelle über weitere SEO-Eingriffe entscheiden; URL-Indexstatus bleibt gesondert zu verifizieren.
+
+
+## Zusatzanalyse 09.11.2026 – Wachstum der Ratgeber-Impressionen ist nicht gleich Dachsanierungs-Nachfrage
+
+**Quelle / Vergleich:** Windsor.ai, bereits verbundener Connector `searchconsole`, Property `sc-domain:dachwerk-kern.de`, jeweils **zwei disjunkte abgeschlossene 28-Tage-Zeiträume: 12.09.–09.10.2026 vs. 10.10.–06.11.2026**. Erster Abruf ohne Query-Dimension mit `fields: page,clicks,impressions,position` (21 bzw. 48 Seitenzeilen). Gruppierung nach URL-Pfad: `/ratgeber/` separat, übrige Seiten getrennt. Es sind Suchimpressionen und Klicks, **keine** Anfragen. Alle verglichenen Tage liegen vor Sites V195/V196 (08.11.) und V202/V203 (09.11.).
+
+| Search-Console-Kennzahl | 12.09.–09.10. | 10.10.–06.11. |
+| --- | ---: | ---: |
+| Ganze Property: Impressionen | 1.380 | 5.817 |
+| Ganze Property: Klicks | 65 | 76 |
+| Ratgeber-URLs: Impressionen | 96 | 4.621 |
+| Ratgeber-URLs: Klicks | 3 | 20 |
+| Andere Seiten: Impressionen | 1.284 | 1.196 |
+| Andere Seiten: Klicks | 62 | 56 |
+| Drei Kern-Leistungsseiten (regionaler Dachsanierungs-Einstieg, allgemeine Dachsanierung, Anbau/Aufstockung): Impressionen | 225 | 257 |
+| Drei Kern-Leistungsseiten: Klicks | 2 | 1 |
+| **Regionale Dachsanierungs-Zielseite allein: Impressionen** | **85** | **40** |
+| Regionale Dachsanierungs-Zielseite allein: Klicks | 1 | 0 |
+
+**Interpretation:** Der große Property-Zuwachs von 4.437 Impressionen stammt rechnerisch vollständig aus Ratgeber-URLs (+4.525); alle anderen URLs zusammen liegen sogar 88 Impressionen darunter. Ratgeber machen zuletzt 79,4 % aller Impressionen aus, zuvor 7,0 %. Deshalb ist „über 5.800 Google-Impressionen“ **keine Entwarnung** für regionale Dachsanierungsanfragen. Die drei Kern-Leistungsseiten erzeugen lediglich einen Klick im aktuellen Fenster; die priorisierte regionale Dachsanierungsseite verliert unverändert Impressionen. Aus den beiden Zeitfenstern allein ergibt sich **keine kausale Fehlerdiagnose**.
+
+**Query-Gegenprüfung:** Separater Windsor-Abruf `fields: page,query,clicks,impressions,position` ergab 71 vs. 516 sichtbare Query+Seiten-Zeilen mit zusammen nur 239 vs. 3.772 Impressionen. Diese Query-Details decken nicht alle Page-only-Impressionen ab und dürfen nicht als vollständige regionale Nachfrage interpretiert werden. Sichtbare regionalspezifische Queries (Suchbegriff enthält u. a. Landsberg, Ammersee, Penzing oder Utting) ergeben 45 vs. 58 Impressionen; darin stecken auch Marken- und Zimmererbegriffe. Sichtbare Kombinationen aus Dachsanierungs- und Ortsbegriff ergeben nur 4 vs. 24 Impressionen; insbesondere „komplettsanierung landsberg“ ist **nicht eindeutig** Dachsanierungs-Kaufintention. Beispiele für den Ratgeber-Zuwachs ohne klare lokale Kaufintention: „holzelementbau anbau“ (182 Impressionen) und „velux dachfenster kosten mit einbau“ (89) im aktuellen Fenster. Google-Query-Daten werden bei kleinen Zahlen teilweise anonymisiert; diese Beispiele erklären deshalb keine vollständige Query-Verteilung.
+
+**Prioritätsfolge:** Wirkungsanalyse getrennt nach (A) `/dachsanierung-landsberg-am-lech` und belegten regionalen Dach-Queries, (B) allgemeinen Dachsanierungs-Leistungsseiten und (C) Ratgeber-Reichweite durchführen. Reale qualifizierte Kontaktanfragen separat zur regionalen Sichtbarkeit abgleichen, ohne aus globalen Ratgeber-Impressionen Leads abzuleiten. Keine weiteren Meta-/Canonical-/Navigationsexperimente ohne echte Post-Deployment-Messung und Abstimmung mit den aktiven Anfrage-/KI-Agenten.
+
+**Änderung / Test / Deployment / Live / Rückweg:** Ausschließlich reproduzierbare Datenauswertung in diesem Dokument; Gruppensummen gegen die unbearbeiteten Windsor-Seitenaggregate und bekannte regionale Einzelwerte abgeglichen. Bereits öffentlich lesend geprüft: `https://dachwerk-kern.de/dachsanierung-landsberg-am-lech`, `/dachsanierung`, Startseite, Kostenratgeber und Kontaktpfad; keine Produktivanfrage. **Keine Website-Quelländerung und kein Deployment**, deshalb kein neuer SEO- oder Anfrageeffekt behauptet. Nativer Sites-Quell-/Deploymentzugriff fehlt dieser Ausführung; das GitHub-Dokument ist nur eine Mess- und Koordinationsablage. Rückweg: diesen Appendix per Git-Revert entfernen. Nächste Messung: erste vollständige 28-Tage-Paarung nach den Veröffentlichungen, getrennt nach Seiten und Query-Intent.
